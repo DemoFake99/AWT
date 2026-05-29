@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MasterPageApp.Site" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>My Simple Website</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table width="100%" border="1" cellpadding="15" cellspacing="0">
+            
+            <tr>
+                <td colspan="2" align="center" bgcolor="#eeeeee">
+                    <h1>My ASP.NET Website</h1>
+                    <p><i>Powered by Master Pages</i></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="20%" valign="top" bgcolor="#f9f9f9">
+                    <h3>Main Menu</h3>
+                    <ul>
+                        <li><a href="Default.aspx">Home</a></li>
+                        <li><a href="About.aspx">About Us</a></li>
+                    </ul>
+                </td>
+
+                <td width="80%" valign="top">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center" bgcolor="#eeeeee">
+                    <p>Copyright &copy; 2026 My Organization. All rights reserved.</p>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
